@@ -1,179 +1,57 @@
-/* Reset defaults */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #001f3f; /* dark navy */
-  color: #fff;
-  direction: rtl;
-  line-height: 1.6;
-}
-
-/* Hero Section */
-.hero {
-  background-color: #002a5c; /* darker blue */
-  color: #ffffff;
-  text-align: center;
-  padding: 60px 20px;
-}
-.hero .logo {
-  width: 150px;
-  margin-bottom: 20px;
-}
-.hero h1 {
-  font-size: 2.8rem;
-  color: #00bfff; /* baby blue */
-  margin-bottom: 15px;
-}
-.hero p {
-  font-size: 1.2rem;
-  color: #cce7ff; /* light baby blue */
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Timeline */
-.timeline {
+/* Subscription Form - Enhanced */
+form {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.timeline-card {
-  background-color: #003366; /* medium dark blue */
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-  padding: 25px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.timeline-card img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 15px 0;
-}
-.timeline-card h2 {
-  color: #00bfff;
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-}
-.timeline-card h3 {
-  color: #ffffff;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-.timeline-card .info {
-  display: none;
-  font-size: 1rem;
-  color: #cce7ff;
-}
-.timeline-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
-}
-.timeline-card:hover .info {
-  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
 }
 
-/* Three-column Section */
-.three-column-card {
-  background-color: #002a5c;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
-  min-height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-}
-.three-column-card i {
-  font-size: 3rem;
-  color: #00bfff;
-  margin-bottom: 10px;
-}
-.three-column-card h2 {
-  color: #00bfff;
-  margin-bottom: 10px;
-}
-.three-column-card p {
-  color: #cce7ff;
-}
-.three-column-card a.btn {
-  margin-top: 10px;
-  border: 1px solid #00bfff;
-  color: #00bfff;
-}
-.three-column-card a.btn:hover {
-  background-color: #00bfff;
-  color: #001f3f;
-}
-
-/* Subscription Form */
-form input, form button {
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border-radius: 5px;
-}
 form input {
-  border: 1px solid #00bfff;
-  background-color: #003366;
-  color: #fff;
-}
-form input::placeholder {
-  color: #cce7ff;
-}
-form button {
-  background-color: #00bfff;
-  border: none;
-  color: #001f3f;
-}
-form button:hover {
-  background-color: #ffffff;
-  color: #001f3f;
-}
-
-/* Footer */
-footer {
+  border: 2px solid #000; /* Black border */
+  background-color: #001f3f; /* Dark navy input */
+  color: #fff; /* White text */
   text-align: center;
-  padding: 25px;
-  background-color: #001f3f;
-  color: #cce7ff;
-}
-footer a {
-  color: #00bfff;
-  margin: 0 0.5rem;
-  text-decoration: none;
-}
-footer a:hover {
-  color: #ffffff;
-  text-decoration: underline;
+  font-weight: 500;
+  max-width: 350px;
+  flex: 1 1 300px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-/* Responsive */
-@media (min-width: 768px) {
-  .timeline {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .timeline-card {
-    flex: 0 0 48%;
-  }
+form input::placeholder {
+  color: #cce7ff; /* Light blue placeholder */
 }
-@media (min-width: 1200px) {
-  .timeline-card {
-    flex: 0 0 30%;
+
+form input:focus {
+  border-color: #ff0000; /* Red border on focus */
+  box-shadow: 0 0 10px rgba(255,0,0,0.5); /* Red glow */
+  outline: none;
+}
+
+form button {
+  background: linear-gradient(45deg, #007bff, #ff0000); /* Blue to red gradient */
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,0,0,0.6);
+  background: linear-gradient(45deg, #ff0000, #007bff); /* Reverse gradient on hover */
+}
+
+/* Ensure mobile responsiveness */
+@media (max-width: 500px) {
+  form input, form button {
+    flex: 1 1 100%;
   }
 }
