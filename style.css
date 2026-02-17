@@ -1,191 +1,207 @@
-/* RESET */
+/* ============================= */
+/* GLOBAL RESET */
+/* ============================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ============================= */
 /* BODY */
+/* ============================= */
 body {
+  font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(to bottom, #02142b, #001122);
   color: #e6f2ff;
   line-height: 1.6;
 }
 
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 50px;
-  background: #02142b;
-  border-bottom: 1px solid #0a2c55;
-}
-
-.logo img {
-  height: 55px;
+/* ============================= */
+/* NAVBAR LOGO */
+/* ============================= */
+.navbar-brand img {
+  height: 40px;
   width: auto;
 }
 
-/* NAV */
-nav a {
-  color: #cce7ff;
-  margin-left: 25px;
-  text-decoration: none;
-  font-weight: 500;
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+header {
+  background: linear-gradient(to right, #0055cc, #002a5c);
+}
+
+header h1 {
+  font-weight: bold;
+}
+
+header p {
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* SECTION HEADINGS */
+/* ============================= */
+section h2 {
+  font-weight: bold;
+  color: #002a5c;
+}
+
+/* ============================= */
+/* TIMELINE CARDS */
+/* ============================= */
+.timeline-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
   transition: 0.3s ease;
 }
 
-nav a:hover {
-  color: #4da3ff;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 90px 20px;
-  background: radial-gradient(circle at top, #002a5c, #000d1f);
-}
-
-.hero h1 {
-  font-size: 44px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 18px;
-  opacity: 0.9;
-}
-
-/* TIMELINE SECTION */
-.timeline {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
-  padding: 70px 30px;
-}
-
-/* TIMELINE CARD */
-.timeline-card {
-  background: linear-gradient(145deg, #002a5c, #001733);
-  border: 1px solid #0a2c55;
-  border-radius: 16px;
-  padding: 25px;
-  width: 320px;
-  overflow: hidden;
-  transition: 0.35s ease;
-}
-
 .timeline-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 30px rgba(0,140,255,0.35);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.timeline-card h3 {
-  color: #4da3ff;
-  margin-bottom: 12px;
+/* ============================= */
+/* IMAGE WRAPPER + HOVER EFFECT */
+/* ============================= */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
-/* ✅ IMAGE FIX */
-.timeline-card img {
+.image-wrapper img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;     /* Prevents stretching */
-  border-radius: 10px;
-  margin-bottom: 15px;
-  display: block;
+  height: 280px;
+  object-fit: cover;
+  transition: 0.4s ease;
 }
 
-/* TEXT */
-.timeline-card p {
-  font-size: 15px;
+/* Overlay */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: 0.4s ease;
+}
+
+.image-overlay h5 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.image-overlay p {
+  font-size: 14px;
   opacity: 0.9;
 }
 
+/* Hover animation */
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.image-wrapper:hover .image-overlay {
+  opacity: 1;
+}
+
+/* ============================= */
 /* SUBSCRIBE SECTION */
-.subscribe {
-  padding: 70px 20px;
+/* ============================= */
+#subscribe {
+  background-color: #f8f9fa;
 }
 
-form {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+#subscribe h2 {
+  color: #002a5c;
 }
 
-form input {
-  background: #001f3f;
-  border: 2px solid #0a2c55;
-  color: white;
-  padding: 12px 16px;
+form .form-control {
   border-radius: 8px;
-  width: 260px;
-  text-align: center;
-  transition: 0.3s;
+  padding: 12px;
 }
 
-form input::placeholder {
-  color: #aacfff;
-}
-
-form input:focus {
-  border-color: #4da3ff;
-  box-shadow: 0 0 10px rgba(0,140,255,0.6);
-  outline: none;
+form .form-control:focus {
+  border-color: #0055cc;
+  box-shadow: 0 0 8px rgba(0, 85, 204, 0.4);
 }
 
 form button {
-  padding: 12px 22px;
-  border: none;
   border-radius: 8px;
+  padding: 10px 25px;
   font-weight: bold;
-  color: white;
-  cursor: pointer;
-  background: linear-gradient(45deg, #007bff, #002a5c);
   transition: 0.3s;
 }
 
 form button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0,140,255,0.6);
-  background: linear-gradient(45deg, #0055cc, #001733);
 }
 
+/* ============================= */
 /* FOOTER */
+/* ============================= */
 footer {
-  text-align: center;
-  padding: 25px;
-  background: #000c1a;
-  border-top: 1px solid #0a2c55;
   font-size: 14px;
-  opacity: 0.8;
 }
 
-/* RESPONSIVE */
+/* ============================= */
+/* RTL SUPPORT */
+/* ============================= */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .navbar-nav {
+  margin-right: auto;
+  margin-left: 0 !important;
+}
+
+html[dir="rtl"] .btn {
+  margin-left: 0 !important;
+  margin-right: 15px;
+}
+
+html[dir="rtl"] .image-overlay {
+  text-align: center;
+}
+
+/* ============================= */
+/* ACCESSIBILITY IMPROVEMENTS */
+/* ============================= */
+
+/* Focus outline for keyboard users */
+a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid #0055cc;
+  outline-offset: 2px;
+}
+
+/* Improve contrast on light background */
+.bg-light {
+  background-color: #f1f5f9 !important;
+}
+
+/* ============================= */
+/* RESPONSIVE TWEAKS */
+/* ============================= */
 @media (max-width: 768px) {
 
-  header {
-    flex-direction: column;
-    gap: 10px;
+  .image-wrapper img {
+    height: 220px;
   }
 
-  nav {
-    margin-top: 10px;
+  header h1 {
+    font-size: 28px;
   }
 
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .timeline-card {
-    width: 90%;
-  }
-
-  form input,
-  form button {
-    width: 90%;
-  }
 }
