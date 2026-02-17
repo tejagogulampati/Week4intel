@@ -18,7 +18,7 @@ body {
 }
 
 /* ============================= */
-/* NAVBAR LOGO */
+/* NAVBAR */
 /* ============================= */
 .navbar-brand img {
   height: 40px;
@@ -60,7 +60,7 @@ section h2 {
 
 .timeline-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* ============================= */
@@ -114,10 +114,39 @@ section h2 {
 }
 
 /* ============================= */
+/* THREE COLUMN SECTION FIXED */
+/* ============================= */
+
+/* White cards with readable text */
+section .border {
+  background-color: #ffffff;
+  color: #002a5c;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+section .border:hover {
+  transform: translateY(-5px);
+}
+
+/* Learn More link */
+.learn-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0d6efd;
+  transition: 0.3s ease;
+}
+
+.learn-link:hover {
+  color: #084298;
+  text-decoration: underline;
+}
+
+/* ============================= */
 /* SUBSCRIBE SECTION */
 /* ============================= */
 #subscribe {
-  background-color: #f8f9fa;
+  background-color: #f1f5f9;
 }
 
 #subscribe h2 {
@@ -138,7 +167,7 @@ form button {
   border-radius: 8px;
   padding: 10px 25px;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 form button:hover {
@@ -160,16 +189,19 @@ html[dir="rtl"] {
   text-align: right;
 }
 
+/* Navbar spacing in RTL */
 html[dir="rtl"] .navbar-nav {
   margin-right: auto;
   margin-left: 0 !important;
 }
 
+/* Flip button spacing */
 html[dir="rtl"] .btn {
   margin-left: 0 !important;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
+/* Keep overlay centered */
 html[dir="rtl"] .image-overlay {
   text-align: center;
 }
@@ -178,7 +210,7 @@ html[dir="rtl"] .image-overlay {
 /* ACCESSIBILITY IMPROVEMENTS */
 /* ============================= */
 
-/* Focus outline for keyboard users */
+/* Keyboard focus visibility */
 a:focus,
 button:focus,
 input:focus {
@@ -186,7 +218,7 @@ input:focus {
   outline-offset: 2px;
 }
 
-/* Improve contrast on light background */
+/* Improve light background contrast */
 .bg-light {
   background-color: #f1f5f9 !important;
 }

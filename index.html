@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Intel Technology Timeline (1985–2024)</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap RTL Compatible -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,19 +18,12 @@
 
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-  
-  <!-- Intel Logo -->
   <a class="navbar-brand" href="#">
-    <img src="img/intel-header-logo.svg" 
-         alt="Intel Company Logo"
-         height="40">
+    <img src="img/intel-header-logo.svg" alt="Intel Logo" height="40">
   </a>
 
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+          data-bs-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -41,8 +37,16 @@
       </li>
     </ul>
 
-    <!-- Google Translate -->
-    <div id="google_translate_element"></div>
+    <!-- Language Buttons -->
+    <button class="btn btn-outline-light btn-sm ms-2"
+            onclick="switchLanguage('en')">
+      English
+    </button>
+
+    <button class="btn btn-outline-light btn-sm ms-2"
+            onclick="switchLanguage('ar')">
+      العربية
+    </button>
   </div>
 </nav>
 
@@ -50,64 +54,60 @@
 <header class="text-white text-center py-5 bg-primary">
   <div class="container">
     <h1 class="display-5 fw-bold">Intel Technology Evolution (1985–2024)</h1>
-    <p class="lead">Hover over each image to explore the milestone.</p>
+    <p class="lead">Hover over each milestone image to learn more.</p>
   </div>
 </header>
 
-<!-- ================= TIMELINE ================= -->
+<!-- ================= TIMELINE (UNCHANGED STRUCTURE) ================= -->
 <section id="timeline" class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-5">Key Milestones</h2>
 
     <div class="row g-4">
 
-      <!-- 1985 -->
       <div class="col-md-6">
         <div class="card shadow-sm timeline-card">
           <div class="image-wrapper">
             <img src="img/1.jpg" alt="Intel 386 Processor 1985">
             <div class="image-overlay">
               <h5>1985 – Intel 386</h5>
-              <p>Introduced 32-bit architecture that transformed personal computing.</p>
+              <p>Introduced 32-bit architecture that transformed computing.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 1995 -->
       <div class="col-md-6">
         <div class="card shadow-sm timeline-card">
           <div class="image-wrapper">
             <img src="img/2.jpg" alt="Intel Pentium Processor 1995">
             <div class="image-overlay">
               <h5>1995 – Pentium Era</h5>
-              <p>Pentium processors revolutionized home and office computing.</p>
+              <p>Pentium processors revolutionized home computing.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 2006 -->
       <div class="col-md-6">
         <div class="card shadow-sm timeline-card">
           <div class="image-wrapper">
             <img src="img/3.jpg" alt="Intel Core Architecture 2006">
             <div class="image-overlay">
               <h5>2006 – Intel Core</h5>
-              <p>Improved energy efficiency and multitasking performance.</p>
+              <p>Improved energy efficiency and multitasking.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 2024 -->
       <div class="col-md-6">
         <div class="card shadow-sm timeline-card">
           <div class="image-wrapper">
             <img src="img/4.jpg" alt="Intel AI Innovation 2024">
             <div class="image-overlay">
-              <h5>2024 – AI & Future Innovation</h5>
-              <p>Advancing AI acceleration, cloud computing, and semiconductor leadership.</p>
+              <h5>2024 – AI & Innovation</h5>
+              <p>Advancing AI acceleration and cloud computing.</p>
             </div>
           </div>
         </div>
@@ -117,15 +117,49 @@
   </div>
 </section>
 
+<!-- ================= THREE COLUMN SECTION ================= -->
+<section class="container py-5">
+  <div class="row text-center">
+
+    <div class="col-md-4 mb-4">
+      <div class="p-4 border rounded h-100 bg-white">
+        <i class="bi bi-cpu-fill display-4 text-primary mb-3"></i>
+        <h4 class="fw-bold">Innovation</h4>
+        <p>Delivering next-generation processors and computing solutions.</p>
+        <a href="#" class="learn-link">Learn More →</a>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="p-4 border rounded h-100 bg-white">
+        <i class="bi bi-globe2 display-4 text-success mb-3"></i>
+        <h4 class="fw-bold">Global Impact</h4>
+        <p>Supporting industries worldwide through advanced technology.</p>
+        <a href="#" class="learn-link">Learn More →</a>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="p-4 border rounded h-100 bg-white">
+        <i class="bi bi-recycle display-4 text-info mb-3"></i>
+        <h4 class="fw-bold">Sustainability</h4>
+        <p>Reducing emissions and promoting responsible innovation.</p>
+        <a href="#" class="learn-link">Learn More →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ================= SUBSCRIBE ================= -->
-<section id="subscribe" class="py-5">
+<section id="subscribe" class="bg-light py-5">
   <div class="container text-center">
     <h2 class="mb-4">Subscribe to Our Sustainability Newsletter</h2>
 
     <form class="row g-3 justify-content-center">
 
       <div class="col-md-6">
-        <label for="email" class="form-label">Email Address</label>
+        <label for="email" class="form-label">Email address</label>
         <input type="email"
                class="form-control"
                id="email"
@@ -145,24 +179,29 @@
 
 <!-- ================= FOOTER ================= -->
 <footer class="bg-dark text-white text-center py-3">
-  © 2026 Intel Technology Project
+  <div class="container">
+    © 2026 Intel Journey Project |
+    <a href="#" class="text-white text-decoration-none">Privacy Policy</a> |
+    <a href="#" class="text-white text-decoration-none">Terms</a>
+  </div>
 </footer>
 
-<!-- ================= BOOTSTRAP JS ================= -->
+<!-- ================= JS ================= -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- ================= GOOGLE TRANSLATE ================= -->
 <script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'ar',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
+function switchLanguage(lang) {
+  const html = document.documentElement;
+
+  if (lang === "ar") {
+    html.setAttribute("lang", "ar");
+    html.setAttribute("dir", "rtl");
+  } else {
+    html.setAttribute("lang", "en");
+    html.setAttribute("dir", "ltr");
+  }
 }
 </script>
-
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
