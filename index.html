@@ -7,10 +7,7 @@
 
   <!-- Bootstrap RTL Compatible -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -30,84 +27,128 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav me-3">
       <li class="nav-item">
-        <a class="nav-link" href="#timeline">Timeline</a>
+        <a class="nav-link translate" data-en="Timeline" data-ar="الخط الزمني">Timeline</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#subscribe">Subscribe</a>
+        <a class="nav-link translate" data-en="Subscribe" data-ar="اشترك">Subscribe</a>
       </li>
     </ul>
 
-    <!-- Language Buttons -->
     <button class="btn btn-outline-light btn-sm ms-2"
-            onclick="switchLanguage('en')">
-      English
-    </button>
+            onclick="switchLanguage('en')">English</button>
 
     <button class="btn btn-outline-light btn-sm ms-2"
-            onclick="switchLanguage('ar')">
-      العربية
-    </button>
+            onclick="switchLanguage('ar')">العربية</button>
   </div>
 </nav>
 
 <!-- ================= HERO ================= -->
 <header class="text-white text-center py-5 bg-primary">
   <div class="container">
-    <h1 class="display-5 fw-bold">Intel Technology Evolution (1985–2024)</h1>
-    <p class="lead">Hover over each milestone image to learn more.</p>
+    <h1 class="display-5 fw-bold translate"
+        data-en="Intel Technology Evolution (1985–2024)"
+        data-ar="تطور تقنيات إنتل (1985–2024)">
+        Intel Technology Evolution (1985–2024)
+    </h1>
+
+    <p class="lead translate"
+       data-en="Hover over each milestone image to learn more."
+       data-ar="مرر المؤشر فوق كل صورة لمعرفة المزيد.">
+       Hover over each milestone image to learn more.
+    </p>
   </div>
 </header>
 
-<!-- ================= TIMELINE (UNCHANGED STRUCTURE) ================= -->
+<!-- ================= TIMELINE ================= -->
 <section id="timeline" class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-5">Key Milestones</h2>
+    <h2 class="text-center mb-5 translate"
+        data-en="Key Milestones"
+        data-ar="أهم المحطات">
+        Key Milestones
+    </h2>
 
     <div class="row g-4">
 
+      <!-- 1985 -->
       <div class="col-md-6">
         <div class="card shadow-sm timeline-card">
           <div class="image-wrapper">
             <img src="img/1.jpg" alt="Intel 386 Processor 1985">
             <div class="image-overlay">
-              <h5>1985 – Intel 386</h5>
-              <p>Introduced 32-bit architecture that transformed computing.</p>
+              <h5 class="translate"
+                  data-en="1985 – Intel 386"
+                  data-ar="1985 – معالج إنتل 386">
+                  1985 – Intel 386
+              </h5>
+              <p class="translate"
+                 data-en="Introduced 32-bit architecture that transformed computing."
+                 data-ar="قدّم بنية 32 بت التي غيرت عالم الحوسبة.">
+                 Introduced 32-bit architecture that transformed computing.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- 1995 -->
       <div class="col-md-6">
         <div class="card shadow-sm timeline-card">
           <div class="image-wrapper">
             <img src="img/2.jpg" alt="Intel Pentium Processor 1995">
             <div class="image-overlay">
-              <h5>1995 – Pentium Era</h5>
-              <p>Pentium processors revolutionized home computing.</p>
+              <h5 class="translate"
+                  data-en="1995 – Pentium Era"
+                  data-ar="1995 – عصر بنتيوم">
+                  1995 – Pentium Era
+              </h5>
+              <p class="translate"
+                 data-en="Pentium processors revolutionized home computing."
+                 data-ar="أحدثت معالجات بنتيوم ثورة في الحوسبة المنزلية.">
+                 Pentium processors revolutionized home computing.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- 2006 -->
       <div class="col-md-6">
         <div class="card shadow-sm timeline-card">
           <div class="image-wrapper">
             <img src="img/3.jpg" alt="Intel Core Architecture 2006">
             <div class="image-overlay">
-              <h5>2006 – Intel Core</h5>
-              <p>Improved energy efficiency and multitasking.</p>
+              <h5 class="translate"
+                  data-en="2006 – Intel Core"
+                  data-ar="2006 – معمارية إنتل كور">
+                  2006 – Intel Core
+              </h5>
+              <p class="translate"
+                 data-en="Improved energy efficiency and multitasking."
+                 data-ar="تحسين كفاءة الطاقة وتعدد المهام.">
+                 Improved energy efficiency and multitasking.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- 2024 -->
       <div class="col-md-6">
         <div class="card shadow-sm timeline-card">
           <div class="image-wrapper">
             <img src="img/4.jpg" alt="Intel AI Innovation 2024">
             <div class="image-overlay">
-              <h5>2024 – AI & Innovation</h5>
-              <p>Advancing AI acceleration and cloud computing.</p>
+              <h5 class="translate"
+                  data-en="2024 – AI & Innovation"
+                  data-ar="2024 – الذكاء الاصطناعي والابتكار">
+                  2024 – AI & Innovation
+              </h5>
+              <p class="translate"
+                 data-en="Advancing AI acceleration and cloud computing."
+                 data-ar="تطوير تسريع الذكاء الاصطناعي والحوسبة السحابية.">
+                 Advancing AI acceleration and cloud computing.
+              </p>
             </div>
           </div>
         </div>
@@ -124,27 +165,36 @@
     <div class="col-md-4 mb-4">
       <div class="p-4 border rounded h-100 bg-white">
         <i class="bi bi-cpu-fill display-4 text-primary mb-3"></i>
-        <h4 class="fw-bold">Innovation</h4>
-        <p>Delivering next-generation processors and computing solutions.</p>
-        <a href="#" class="learn-link">Learn More →</a>
+        <h4 class="fw-bold translate" data-en="Innovation" data-ar="الابتكار">Innovation</h4>
+        <p class="translate" data-en="Delivering next-generation processors and computing solutions."
+           data-ar="تقديم المعالجات وحلول الحوسبة للجيل القادم.">
+           Delivering next-generation processors and computing solutions.
+        </p>
+        <a href="#" class="learn-link translate" data-en="Learn More →" data-ar="اعرف المزيد →">Learn More →</a>
       </div>
     </div>
 
     <div class="col-md-4 mb-4">
       <div class="p-4 border rounded h-100 bg-white">
         <i class="bi bi-globe2 display-4 text-success mb-3"></i>
-        <h4 class="fw-bold">Global Impact</h4>
-        <p>Supporting industries worldwide through advanced technology.</p>
-        <a href="#" class="learn-link">Learn More →</a>
+        <h4 class="fw-bold translate" data-en="Global Impact" data-ar="الأثر العالمي">Global Impact</h4>
+        <p class="translate" data-en="Supporting industries worldwide through advanced technology."
+           data-ar="دعم الصناعات في جميع أنحاء العالم من خلال التكنولوجيا المتقدمة.">
+           Supporting industries worldwide through advanced technology.
+        </p>
+        <a href="#" class="learn-link translate" data-en="Learn More →" data-ar="اعرف المزيد →">Learn More →</a>
       </div>
     </div>
 
     <div class="col-md-4 mb-4">
       <div class="p-4 border rounded h-100 bg-white">
         <i class="bi bi-recycle display-4 text-info mb-3"></i>
-        <h4 class="fw-bold">Sustainability</h4>
-        <p>Reducing emissions and promoting responsible innovation.</p>
-        <a href="#" class="learn-link">Learn More →</a>
+        <h4 class="fw-bold translate" data-en="Sustainability" data-ar="الاستدامة">Sustainability</h4>
+        <p class="translate" data-en="Reducing emissions and promoting responsible innovation."
+           data-ar="تقليل الانبعاثات وتعزيز الابتكار المسؤول.">
+           Reducing emissions and promoting responsible innovation.
+        </p>
+        <a href="#" class="learn-link translate" data-en="Learn More →" data-ar="اعرف المزيد →">Learn More →</a>
       </div>
     </div>
 
@@ -154,12 +204,20 @@
 <!-- ================= SUBSCRIBE ================= -->
 <section id="subscribe" class="bg-light py-5">
   <div class="container text-center">
-    <h2 class="mb-4">Subscribe to Our Sustainability Newsletter</h2>
+    <h2 class="mb-4 translate"
+        data-en="Subscribe to Our Sustainability Newsletter"
+        data-ar="اشترك في نشرتنا الإخبارية حول الاستدامة">
+        Subscribe to Our Sustainability Newsletter
+    </h2>
 
     <form class="row g-3 justify-content-center">
 
       <div class="col-md-6">
-        <label for="email" class="form-label">Email address</label>
+        <label for="email" class="form-label translate"
+               data-en="Email address"
+               data-ar="البريد الإلكتروني">
+          Email address
+        </label>
         <input type="email"
                class="form-control"
                id="email"
@@ -168,9 +226,8 @@
       </div>
 
       <div class="col-12">
-        <button type="submit" class="btn btn-primary px-4">
-          Subscribe
-        </button>
+        <button type="submit" class="btn btn-primary px-4 translate"
+                data-en="Subscribe" data-ar="اشترك">Subscribe</button>
       </div>
 
     </form>
@@ -179,10 +236,9 @@
 
 <!-- ================= FOOTER ================= -->
 <footer class="bg-dark text-white text-center py-3">
-  <div class="container">
-    © 2026 Intel Journey Project |
-    <a href="#" class="text-white text-decoration-none">Privacy Policy</a> |
-    <a href="#" class="text-white text-decoration-none">Terms</a>
+  <div class="container translate" data-en="© 2026 Intel Journey Project | Privacy Policy | Terms"
+       data-ar="© 2026 مشروع رحلة إنتل | سياسة الخصوصية | الشروط">
+    © 2026 Intel Journey Project | Privacy Policy | Terms
   </div>
 </footer>
 
@@ -200,6 +256,10 @@ function switchLanguage(lang) {
     html.setAttribute("lang", "en");
     html.setAttribute("dir", "ltr");
   }
+
+  document.querySelectorAll(".translate").forEach(el => {
+    el.textContent = el.getAttribute("data-" + lang);
+  });
 }
 </script>
 
